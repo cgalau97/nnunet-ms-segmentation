@@ -105,7 +105,7 @@ class nnUNetTrainerEarlyStopping(nnUNetTrainer):
             device: torch.device = torch.device('cuda')
     ):
         super().__init__(plans, configuration, fold, dataset_json, unpack_dataset, device)
-        self.patience = 100
+        self.patience = 25
         self.min_delta = 0
         self.cumulative_delta = False
         self.early_stopping = EarlyStopping(
